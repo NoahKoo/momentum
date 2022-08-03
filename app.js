@@ -1,5 +1,9 @@
-function plus(a, b) {
-  console.log(a + b);
-}
+const player = {
+  name: "noah",
+  sayHello: function (otherPersonsName) {
+    console.log("hello " + otherPersonsName + " nice to meet you!");
+  },
+};
 
-plus(8, 60);
+player.sayHello("tim");
+player.sayHello("tom");
