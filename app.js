@@ -1,4 +1,14 @@
-const amIHandsome = null;
-let something;
+const player = {
+  name: "noah",
+  point: 10,
+  fat: true,
+};
 
-console.log(sonething, amIHandsome);
+console.log(player);
+
+console.log(player.name);
+console.log(player["name"]);
+
+console.log(player);
+player.lastName = "potato";
+console.log(player);
