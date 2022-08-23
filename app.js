@@ -1,12 +1,9 @@
-const h1 = document.querySelector("div.hello:first-child h1");
+const loginForm = document.querySelector("#login-form");
+const loginInput = document.querySelector("#login-form input");
 
-function handleTitleClick() {
-  const clickedClass = "clicked";
-  if (h1.className === "clickedClass") {
-    h1.className = "";
-  } else {
-    h1.className = "clickedClass";
-  }
+function onLoginSubmit(tomato) {
+  tomato.preventDefalut();
+  console.log(tomato);
 }
 
-h1.addEventListener("click", handleTitleClick);
+loginForm.addEventListener("submit", onLoginSubmit);
