@@ -27,9 +27,8 @@ const quotes = [
     author: "James Cameron",
   },
   {
-    quote:
-      "If you look at what you have in life, you'll always have more. If you look at what you don't have in life, you'll never have enough.",
-    author: "Oprah Winfrey",
+    quote: "They tried to bury us, and they didn't know we were seeds",
+    author: "Mexican proverb",
   },
   {
     quote:
@@ -48,8 +47,8 @@ const quotes = [
   },
 ];
 
-const quote = document.querySelector("#quote span:first-child");
-const author = document.querySelector("#quote span:last-child");
+const quote = document.querySelector("#quote div:first-child");
+const author = document.querySelector("#quote div:last-child");
 
 const todaysQuote = quotes[Math.floor(Math.random() * quotes.length)];
 

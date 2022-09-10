@@ -1,0 +1,97 @@
+#clock {
+  margin: 50px 0 20px 0;
+  font-size: 80px;
+  color: white;
+  display: flex;
+  justify-content: center;
+}
+
+#weather {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 80px;
+  font-size: 30px;
+  color: white;
+}
+
+#quote {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.header_top {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 25px;
+  font-size: 60px;
+  color: white;
+}
+
+.big-border {
+  height: 100%;
+  border: 2px solid white;
+}
+
+.login-btn {
+  margin-top: 50px;
+  display: flex;
+  justify-content: center;
+}
+
+.hidden {
+  display: none;
+}
+
+.input-border {
+  border: none;
+  background-color: rgba(0, 0, 0, 0.4);
+  border-radius: 8px;
+  padding: 15px 5px 15px 5px;
+  margin-top: 50px;
+  margin-bottom: 25px;
+  width: 300px;
+  z-index: 2;
+  color: white;
+  font-size: 30px;
+}
+
+.input-btn {
+  border: none;
+  background-color: rgba(0, 0, 0, 0.4);
+  border-radius: 8px;
+  padding: 15px 5px 15px 5px;
+  margin-top: 50px;
+  margin-bottom: 25px;
+  width: 120px;
+  color: white;
+  font-size: 30px;
+}
+
+.input-border::placeholder {
+  color: white;
+  text-align: center;
+  font-size: 30px;
+}
+
+.input-border:hover,
+.input-btn:hover {
+  background-color: rgba(30, 243, 11, 0.4);
+}
+
+.greeting-user {
+  display: flex;
+  justify-content: center;
+  color: white;
+}
+
+.quote-main {
+  margin: 150px 0 25px 0;
+  color: white;
+  font-size: 30px;
+}
+
+.quote-author {
+  color: white;
+  font-size: 20px;
+}
