@@ -55,6 +55,10 @@ img {
   font-size: 25px;
 }
 
+#greeting {
+  color: white;
+}
+
 .header_top {
   display: flex;
   justify-content: center;
