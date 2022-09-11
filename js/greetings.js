@@ -4,7 +4,6 @@ const loginBtn = document.querySelector(".login-btn");
 const todoFlex = document.querySelector("#todo-form");
 const greeting = document.querySelector("#greeting");
 const logoutForm = document.querySelector("#logout-form");
-const logoutBtn = document.querySelector(".btn-logout");
 const quoteMain = document.querySelector(".quote-main");
 const quoteAuthor = document.querySelector(".quote-author");
 
@@ -24,15 +23,11 @@ function onLoginSubmit(event) {
 }
 
 function onLogoutSubmit(event) {
-  if (confirm("로그아웃 하시겠습니까?")) {
-    localStorage.clear();
-    window.location.reload();
-  } else {
-    return;
-  }
+  localStorage.clear();
+  window.open.reload();
 }
 
-logoutBtn.addEventListener("submit", onLogoutSubmit);
+logoutForm.addEventListener("submit", onLogoutSubmit);
 
 function paintGreetings(username) {
   greeting.innerText = `어서오세요 ${username}님, 환영합니다.`;
@@ -48,5 +43,3 @@ if (savedUsername === null) {
 } else {
   paintGreetings(savedUsername);
 }
-
-logoutBtn.addEventListener("submit", onLogoutSubmit);

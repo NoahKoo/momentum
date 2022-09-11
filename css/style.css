@@ -44,6 +44,18 @@ img {
   border: none;
 }
 
+#logout-form input {
+  border: none;
+  background-color: rgba(0, 0, 0, 0.5);
+  border-radius: 5px;
+  color: white;
+  font-size: 20px;
+}
+
+#logout-form input:hover {
+  background-color: rgba(245, 8, 8, 0.5);
+}
+
 #todo-list li {
   border: none;
   background-color: rgba(0, 0, 0, 0.1);
@@ -127,18 +139,6 @@ img {
 .quote-author {
   color: white;
   font-size: 20px;
-}
-
-.btn-logout {
-  border: none;
-  background-color: rgba(0, 0, 0, 0.5);
-  border-radius: 5px;
-  color: white;
-  font-size: 20px;
-}
-
-.btn-logout:hover {
-  background-color: rgba(245, 8, 8, 0.5);
 }
 
 .todo-input {
