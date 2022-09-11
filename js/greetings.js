@@ -1,19 +1,38 @@
 const loginForm = document.querySelector("#login-form");
 const loginInput = document.querySelector("#login-form input");
+const loginBtn = document.querySelector(".login-btn");
+const todoFlex = document.querySelector("#todo-form");
 const greeting = document.querySelector("#greeting");
+const logoutForm = document.querySelector("#logout-form");
 const logoutBtn = document.querySelector(".btn-logout");
+const quoteMain = document.querySelector(".quote-main");
+const quoteAuthor = document.querySelector(".quote-author");
 
 const HIDDEN_CLASSNAME = "hidden";
 const USERNAME_KEY = "username";
 
 function onLoginSubmit(event) {
   event.preventDefault();
-  loginForm.classList.add(HIDDEN_CLASSNAME);
+  loginBtn.classList.add(HIDDEN_CLASSNAME);
+  logoutForm.classList.remove(HIDDEN_CLASSNAME);
+  todoFlex.classList.remove(HIDDEN_CLASSNAME);
+  quoteMain.classList.add(HIDDEN_CLASSNAME);
+  quoteAuthor.classList.add(HIDDEN_CLASSNAME);
   const username = loginInput.value;
   localStorage.setItem(USERNAME_KEY, username);
   paintGreetings(username);
-  window.location.href = "list.html";
 }
+
+function onLogoutSubmit(event) {
+  if (confirm("로그아웃 하시겠습니까?")) {
+    localStorage.clear();
+    window.location.reload();
+  } else {
+    return;
+  }
+}
+
+logoutBtn.addEventListener("submit", onLogoutSubmit);
 
 function paintGreetings(username) {
   greeting.innerText = `어서오세요 ${username}님, 환영합니다.`;
@@ -22,15 +41,9 @@ function paintGreetings(username) {
 
 const savedUsername = localStorage.getItem(USERNAME_KEY);
 
-function onLogoutSubmit(event) {
-  savedUsername();
-  localStorage.removeItem(USERNAME_KEY);
-  window.location.href = "index.html";
-  window.location.clear();
-}
-
 if (savedUsername === null) {
   loginForm.classList.remove(HIDDEN_CLASSNAME);
+  logoutForm.classList.add(HIDDEN_CLASSNAME);
   loginForm.addEventListener("submit", onLoginSubmit);
 } else {
   paintGreetings(savedUsername);
